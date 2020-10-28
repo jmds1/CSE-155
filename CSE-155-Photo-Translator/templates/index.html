@@ -23,15 +23,34 @@
         </button>
     </nav>
 
+    <style>
+        .thumb {
+            height: 75px;
+            border: 1px solid #000;
+            margin: 10px 5px 0 0;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        /* The uploader form */
+        $(function () {
+            $(":file").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+    
+                    reader.onload = imageIsLoaded;
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    
+    </script>
+    
+    
+    <input type='file' />
+    </br><img id="myImg" src="#" alt="your image">
 
     <img src="UCM.jpg"/>
-
-    <form method="post" enctype="multipart/form-data">
-        File name:<input type="file" name="imgfile"><br>
-        <input type="submit" name="submit" value="upload">
-    </form>
-    
-
 
 </body>
 
