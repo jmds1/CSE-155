@@ -13,28 +13,25 @@
     <script src="jquery/jquery.js"></script>
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="main.js"></script>
-
-    
 </head>
 
-<body>
+<body style = "background-color:darkorchid;">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Photo Translator</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
     </nav>
 
 
-    <main role="main">
-        <div class="jumbotron fixed-height">
-            <div class="container">
-                <h1 id="display-word" class="game-word text-center"></h1>
-            </div>
-        </div>
-        
-    </main>
+    <img src="UCM.jpg"/>
+
+    <form method="post" enctype="multipart/form-data">
+        File name:<input type="file" name="imgfile"><br>
+        <input type="submit" name="submit" value="upload">
+    </form>
+    
+
 
 </body>
 
