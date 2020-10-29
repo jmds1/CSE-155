@@ -15,7 +15,8 @@
     <script src="main.js"></script>
 </head>
 
-<body style = "background-color:darkorchid;">
+
+<body style = "background-color:transparent;">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Photo Translator</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,12 +46,29 @@
         });
     
     </script>
-    
-    
-    <input type='file' />
-    </br><img id="myImg" src="#" alt="your image">
 
-    <img src="UCM.jpg"/>
+    <script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#myImg')
+                .attr('src', e.target.result)
+                .width(500)
+                .height(200);
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+    </script>
+    
+    
+    <input type='file' onchange="readURL(this);" />
+    </br><img id="myImg" src="#" alt="your image">
+    
+    <img src="UCM.jpg" width='60' height='24'>
 
 </body>
 
