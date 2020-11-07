@@ -97,10 +97,20 @@
             };
             </script>
           </div>
+          <br>
+          <br>
+          <button type="button" id = "t" class="btn btn-outline-dark" value= "Input" >Translate</button>
+
+          <script>
+            $("#t").click(function(){
+              $.ajax({
+                url: "C:\Users\nickm\Documents\GitHub\CSE-155\CSE-155-Photo-Translator\src\translate.py"
+            });
+          });
+          </script>
         </div>
   </div>
 
 </div>
 
-<script src = "index.js"> </script>
 </html>
