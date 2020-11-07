@@ -23,13 +23,14 @@ for images in glob.glob("*.jpg"):
 
     # Gets the image and translates it to Czech. You can specify own lang if you want.
     text = pytesseract.image_to_string(im, lang = 'eng')
-    text_translated = translator.translate(text, dest="cs")
 
     # Finally, print the translated image's text and print it.
 
     text_file = open("Output.txt", "w")
 
-    text_file.write("Purchase Amount: " 'TotalAmount')
+    text_file.write("%s" % text)
+
+    text_file.close()
     print(text_translated)
     print("\n")
 
